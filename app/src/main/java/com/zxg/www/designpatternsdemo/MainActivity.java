@@ -1,19 +1,14 @@
 package com.zxg.www.designpatternsdemo;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.app.Dialog;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
-import android.view.ViewGroup;
 
-import com.zxg.www.designpatternsdemo.builder.NavigationBar;
-import com.zxg.www.designpatternsdemo.manager.ActivityManager;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
@@ -25,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
             super.handleMessage(msg);
             System.out.println("handleMessage: msg.what=" + msg.what + "msg.obj=" + msg.obj);
             Log.i(TAG, "zxglog handleMessage: msg.what=" + msg.what + "msg.obj=" + msg.obj);
+            //我要测试更新github
 
         }
     };
@@ -73,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         //模拟：开启子线程，发送消息给主线程
 
         new Thread(new Runnable() {
+            @SuppressLint("HandlerLeak")
             @Override
             public void run() {
                 //模拟子线程发送消息给主线程
