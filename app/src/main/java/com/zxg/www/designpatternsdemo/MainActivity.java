@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
             System.out.println("handleMessage: msg.what=" + msg.what + "msg.obj=" + msg.obj);
             Log.i(TAG, "zxglog handleMessage: msg.what=" + msg.what + "msg.obj=" + msg.obj);
             //我要测试更新github
+            Log.i(TAG, "zxglog handleMessage: ");
 
         }
     };
